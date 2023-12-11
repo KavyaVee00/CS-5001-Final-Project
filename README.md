@@ -119,6 +119,82 @@ The create_account function allows a user to create a new account. It prompts th
 > When I initially had written this code, I kept having the problem where I would create an account with a username and password, and then when I went to login with the exact same username and password, it would tell me that the username was not found (even though it was the exact username I had signed up with). I eventually understood that the issue seemed to be related to the trailing space in the username when creating a new account. To fix this, I modified the code so that it would strip the leading and trailing spaces from the entered username.
 
 
+### Login 
+
+The login function handles the login process. It checks if the entered username exists in the user_accounts dictionary. If the username exists, it prompts the user for a password and checks if it matches the stored password. If the password is incorrect, it allows the user to retry or go back to the main menu by entering 'Q'.
+
+    def login(username, password):
+    """
+    Log in a user with the provided username and password.
+
+    Parameters:
+    - username (str): The username for login.
+    - password (str): The password for login.
+
+    Returns:
+    - None
+    """
+    print("Login:")
+
+    # Check if the username exists
+    cleaned_username = username.strip()
+    if cleaned_username not in user_accounts:
+        print("Username not found. Please create a new account.")
+        return
+
+    # Check if the entered password matches the stored password
+    stored_password = user_accounts[cleaned_username]
+    while stored_password != password:
+        password = input("Incorrect password. Please try again. (or 'Q' to go back to the main menu): ").strip()
+
+        if password.upper() == "Q":
+            return
+
+    print("Login successful!")
+
+> Major Challenge  
+> When I had resetted a password and tried logging in again, it would say that the password was wrong. It seemed like there was an issue with the login function where it doesn't correctly handle the updated password after a successful reset. The problem was that the login function I had written didn't take the new password into account when checking for a match. So I had modified the code so that it ensured that the login function uses the cleaned username when checking for a match in the user_accounts dictionary.
+
+
+### Resetting Password 
+
+
+    def reset_password(username, new_password):
+    """
+    Reset the password for a user.
+
+    Parameters:
+    - username (str): The username for which the password is reset.
+    - new_password (str): The new password.
+
+    Returns:
+    - None
+    """
+    print("Reset Password:")
+
+    # Check if the username exists (after stripping leading/trailing spaces)
+    cleaned_username = username.strip()
+    if cleaned_username not in user_accounts:
+        print("Username not found. Please create a new account.")
+        return
+
+    # Check if the new password is strong
+    while not is_password_strong(cleaned_username, new_password):
+        print("Weak password. Make sure it meets the criteria:")
+        print("- 8 to 16 characters")
+        print("- At least one uppercase letter")
+        print("- At least one lowercase letter")
+        print("- At least one digit")
+        print("- At least one special character (!@#$%^&*(),.?\":{}|<>)")
+        print("- Should not contain the username")
+        new_password = input("Enter a stronger password: ")
+
+    # Update the password in the dictionary
+    user_accounts[cleaned_username] = new_password
+    print("Password reset successful!")
+
+
+
 ### Major Challenges
 Key aspects could include pieces that your struggled on and/or pieces that you are proud of and want to show off.
 
