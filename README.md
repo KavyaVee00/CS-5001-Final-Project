@@ -117,7 +117,7 @@ The create_account function allows a user to create a new account. It prompts th
     user_accounts[cleaned_username] = password
     print("Account created successfully!")
 
-> Major Challenge  
+> Major Challenge:  
 > When I initially had written this code, I kept having the problem where I would create an account with a username and password, and then when I went to login with the exact same username and password, it would tell me that the username was not found (even though it was the exact username I had signed up with). I eventually understood that the issue seemed to be related to the trailing space in the username when creating a new account. To fix this, I modified the code so that it would strip the leading and trailing spaces from the entered username.
 
 
@@ -154,7 +154,7 @@ The login function handles the login process. It checks if the entered username 
 
     print("Login successful!")
 
-> Major Challenge  
+> Major Challenge:  
 > When I had resetted a password and tried logging in again, it would say that the password was wrong. It seemed like there was an issue with the login function where it doesn't correctly handle the updated password after a successful reset. The problem was that the login function I had written didn't take the new password into account when checking for a match. So I had modified the code so that it ensured that the login function uses the cleaned username when checking for a match in the user_accounts dictionary.
 
 
@@ -196,8 +196,9 @@ The reset_password function allows a user to reset their password. It checks if 
     user_accounts[cleaned_username] = new_password
     print("Password reset successful!")
 
-> Key takeaway
+> Key takeaway:  
 > When I had originally written the code, I had forgotton to update the password in the dictionary. Every time I tried to log in with the new password, it would say wrong password. I realized my mistake and wrote in the code to update the password. This really affirmed for me the usefulness of dictionaries in code.
+
 
 
 ### Main function 
@@ -244,12 +245,91 @@ The function contains a ongoing loop which ensures that the program continues to
         if __name__ == "__main__":
             main()
 
-### Major Challenges
-Key aspects could include pieces that your struggled on and/or pieces that you are proud of and want to show off.
 
 
 ## Example Runs
-Explain how you documented running the project, and what we need to look for in your repository (text output from the project, small videos, links to videos on youtube of you running it, etc)
+
+### Welcome prompt 
+```text
+Welcome to the Northeastern Align Networking app!
+
+Options:
+L - Login
+A - Create a New account
+R - Reset password
+Q - Quit
+Enter your choice: 
+```
+
+### Creating account
+```text
+Options:
+L - Login
+A - Create a New account
+R - Reset password
+Q - Quit
+Enter your choice: A
+Enter your username: KavyaV
+Enter your password: AlignN.1212
+Creating a new account:
+Account created successfully!
+ 
+```
+### Login 
+```text
+Options:
+L - Login
+A - Create a New account
+R - Reset password
+Q - Quit
+Enter your choice: L
+Enter your username: KavyaV
+Enter your password: AlignN.1212
+Login:
+Login successful!
+ 
+```
+
+### Username Checking 
+
+```text
+Options:
+L - Login
+A - Create a New account
+R - Reset password
+Q - Quit
+Enter your choice: A
+Enter your username: KavyaV 
+Enter your password: qwdnhwkd
+Creating a new account:
+Username already exists. Please choose another.
+ 
+```
+
+### Password checking 
+
+```text
+Options:
+L - Login
+A - Create a New account
+R - Reset password
+Q - Quit
+Enter your choice: A
+Enter your username: KavyaVee
+Enter your password: 1121ed323
+Creating a new account:
+Weak password. Make sure it meets the criteria:
+- 8 to 16 characters
+- At least one uppercase letter
+- At least one lowercase letter
+- At least one digit
+- At least one special character (!@#$%^&*(),.?":{}|<>)
+- Should not contain the username
+Enter a stronger password: 
+ 
+```
+
+
 
 ## Testing
 How did you test your code? What did you do to make sure your code was correct? If you wrote unit tests, you can link to them here. If you did run tests, make sure you document them as text files, and include them in your submission. 
