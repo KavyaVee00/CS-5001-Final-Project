@@ -6,7 +6,7 @@
 * Course: CS 5001
 
 
-[Project.py](../Project.py) - This is the main file you will be working on. It contains the functions you will be writing, along with already built docstrings. 
+
 ## Description 
 I've taken on a project to develop a password checker which was insired by the widespread use of passwords in our everyday online activities. 
 
@@ -30,21 +30,21 @@ The user experience will mirror an actual login scenario, requiring individuals 
 ## Guide
 There will be a prompt welcoming you to to site. There will be 3 options 
 
-L - Login 
-A - Create a New account 
-R - Reset password 
+- L - Login 
+- A - Create a New account 
+- R - Reset password 
 
 Whichever key you click, it will direct you to that accordingly. 
 
 Here are the steps to run the project locally:
 
-Download the Script:
+- Download the Script:
 Download the Python script (e.g., project.py) to your local machine.
 
-Open a Terminal/Command Prompt:
+- Open a Terminal/Command Prompt:
 Open a terminal or command prompt on your computer.
 
-Navigate to the Script's Directory:
+- Navigate to the Script's Directory:
 Use the cd command to navigate to the directory where the script is located. 
 
 Since this script doesn't have external dependencies, you can run it without additional installations.
