@@ -424,7 +424,10 @@ I tested this code by writing test cases for the functions:
 
 
 ## Missing Features / What's Next
-Focus on what you didn't get to do, and what you would do if you had more time, or things you would implement in the future. 
+In the future, I would implement these features: 
+- Avoid Common Passwords: Check if the password is not too common or easily guessable.
+- Password History: Keep a history of previous passwords to prevent users from reusing the same passwords.
+- Account Lockout Policy: Implement a policy that locks an account after multiple failed login attempts.
 
 ## Final Reflection
 Write at least a paragraph about your experience in this course. What did you learn? What do you need to do to learn more? Key takeaways? etc.
