@@ -1,18 +1,31 @@
 # Final Project Report
 
-* Student Name:
-* Github Username:
-* Semester:
-* Course:
+* Student Name: Kavya Veeramony
+* Github Username: KavyaVee00
+* Semester: Fall 2023
+* Course: CS 5001
 
 
 
 ## Description 
-General overview of the project, what you did, why you did it, etc. 
+I've taken on a project to develop a password checker which was insired by the widespread use of passwords in our everyday online activities. 
+
+From emails and social media to shopping and gaming, passwords are a crucial aspect of our online experiences. My aim is to understand how we can ensure these passwords are strong and secure. It goes beyond just account logins; it encompasses all our online interactions, be it for work, school, healthcare, and more. This project is my way of delving into what factors contribute to the security of passwords across various aspects of our digital lives. It's an interesting journey to explore how we can make online activities safer through robust password practices. 
+
 
 
 ## Key Features
-Highlight some key features of this project that you want to show off/talk about/focus on. 
+The objective here is to facilitate the creation of an account on the new Northeastern Align Networking app, providing a platform for connecting with fellow Align students. 
+
+The primary focus of this project lies in establishing strict password requirements to ensure that users create secure passwords meeting specific criteria: 
+- 8 to 16 characters
+- at least one uppercase letter,
+- one lowercase letter, one digit
+- one special character.
+- Must not contain the login name
+
+The user experience will mirror an actual login scenario, requiring individuals without an existing account to create one. Subsequently, they will need to sign in with the correct username and password. In case of incorrect login attempts, users will have the option to reset their password. 
+
 
 ## Guide
 How do we run your project? What should we do to see it in action? - Note this isn't installing, this is actual use of the project.. If it is a website, you can point towards the gui, use screenshots, etc talking about features. 
@@ -23,6 +36,28 @@ If we wanted to run this project locally, what would we need to do?  If we need 
 
 ## Code Review
 Go over key aspects of code in this section. Both link to the file, include snippets in this report (make sure to use the [coding blocks](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)).  Grading wise, we are looking for that you understand your code and what you did. 
+
+
+### Password
+
+
+    def is_password_strong(username, password):
+    """
+    Check if a password is strong based on certain criteria.
+
+    Parameters:
+    - username (str): The username associated with the password.
+    - password (str): The password to be checked.
+
+    Returns:
+    - bool: True if the password is strong, False otherwise.
+    """
+    if 8 <= len(password) <= 16 and re.search(r'[A-Z]', password) and re.search(r'[a-z]', password) \
+            and re.search(r'\d', password) and re.search(r'[!@#$%^&*(),.?":{}|<>]', password) \
+            and username.lower() not in password.lower():
+        return True
+    return False
+
 
 ### Major Challenges
 Key aspects could include pieces that your struggled on and/or pieces that you are proud of and want to show off.
