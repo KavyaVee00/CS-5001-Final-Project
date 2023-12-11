@@ -78,6 +78,7 @@ Code Explanation:
 
 ### Creating an account 
 
+The create_account function allows a user to create a new account. It prompts the user for a username and password. It checks if the username already exists in the user_accounts dictionary. It ensures that the password is strong by repeatedly prompting the user until a strong password is provided. The account details are then stored in the dictionary.
 
 
     def create_account(username, password):
@@ -113,6 +114,9 @@ Code Explanation:
     # Store the username and password in the dictionary
     user_accounts[cleaned_username] = password
     print("Account created successfully!")
+
+> Major Challenge  
+> When I initially had written this code, I kept having the problem where I would create an account with a username and password, and then when I went to login with the exact same username and password, it would tell me that the username was not found (even though it was the exact username I had signed up with). I eventually understood that the issue seemed to be related to the trailing space in the username when creating a new account. To fix this, I modified the code so that it would strip the leading and trailing spaces from the entered username.
 
 
 ### Major Challenges
