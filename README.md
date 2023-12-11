@@ -6,7 +6,7 @@
 * Course: CS 5001
 
 
-
+[Project.py](../Project.py) - This is the main file you will be working on. It contains the functions you will be writing, along with already built docstrings. 
 ## Description 
 I've taken on a project to develop a password checker which was insired by the widespread use of passwords in our everyday online activities. 
 
