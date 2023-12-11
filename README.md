@@ -271,7 +271,7 @@ The function contains a ongoing loop which ensures that the program continues to
 
 
 
-## Example Runs
+## Example Prompt Runs
 
 ### Welcome prompt 
 ```text
