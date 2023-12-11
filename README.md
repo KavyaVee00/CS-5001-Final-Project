@@ -28,11 +28,34 @@ The user experience will mirror an actual login scenario, requiring individuals 
 
 
 ## Guide
-How do we run your project? What should we do to see it in action? - Note this isn't installing, this is actual use of the project.. If it is a website, you can point towards the gui, use screenshots, etc talking about features. 
+There will be a prompt welcoming you to to site. There will be 3 options 
+
+L - Login 
+A - Create a New account 
+R - Reset password 
+
+Whichever key you click, it will direct you to that accordingly. 
+
+Here are the steps to run the project locally:
+
+Download the Script:
+Download the Python script (e.g., project.py) to your local machine.
+
+Open a Terminal/Command Prompt:
+Open a terminal or command prompt on your computer.
+
+Navigate to the Script's Directory:
+Use the cd command to navigate to the directory where the script is located. 
+
+Since this script doesn't have external dependencies, you can run it without additional installations.
 
 
-## Installation Instructions
-If we wanted to run this project locally, what would we need to do?  If we need to get API key's include that information, and also command line startup commands to execute the project. If you have a lot of dependencies, you can also include a requirements.txt file, but make sure to include that we need to run `pip install -r requirements.txt` or something similar.
+
+
+
+
+
+
 
 ## Code Review
 Go over key aspects of code in this section. Both link to the file, include snippets in this report (make sure to use the [coding blocks](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)).  Grading wise, we are looking for that you understand your code and what you did. 
@@ -429,5 +452,6 @@ In the future, I would implement these features:
 - Password History: Keep a history of previous passwords to prevent users from reusing the same passwords.
 - Account Lockout Policy: Implement a policy that locks an account after multiple failed login attempts.
 
-## Final Reflection
-Write at least a paragraph about your experience in this course. What did you learn? What do you need to do to learn more? Key takeaways? etc.
+## Final Reflection 
+
+One of the key takeaways from this class has been understanding the basic concepts of programming, such as variables, data types, conditionals, loops, debugging, etc. I've also learned how to write simple programs and solve problems using code. The instructional videos have been essential in grasping these foundational concepts, and I appreciate the guidance provided by the instructor and the opportunity to practice coding during the video lectures as well. The class has been both useful and challenging. It's been rewarding to see how coding can be applied to real-world problem-solving, which I find highly valuable. However, the challenges have arisen when dealing with more complex coding tasks and debugging issues. One of the most challenging aspects for me has been mastering the syntax of programming languages and understanding how to translate my ideas into functional code. I feel like I understand the problem and that I know what I want the function to do, but when it comes to writing the code, it takes me a little bit more time being able to organize everything so that it runs smoothly. What I've enjoyed the most is the sense of accomplishment when I successfully write code that works as intended. Especially whenever I submit it, and then the autograder lets me know that I have something wrong with the code. Being able to go back and successfully figure out what went wrong using the knowledge that I learned makes me really feel a sense of accomplishment. I can see the direct application of what I've learned in this class in various fields, from automating repetitive tasks to developing simple software solutions. 
