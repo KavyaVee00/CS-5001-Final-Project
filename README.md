@@ -328,6 +328,30 @@ Weak password. Make sure it meets the criteria:
 Enter a stronger password: 
  
 ```
+### Password Resetting 
+
+```text
+Options:
+L - Login
+A - Create a New account
+R - Reset password
+Q - Quit
+Enter your choice: R
+Enter your username: KavyaV
+Enter your new password: North.E123
+Reset Password:
+Password reset successful!
+ 
+```
+
+
+
+
+
+
+
+
+
 
 
 
