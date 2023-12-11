@@ -60,7 +60,7 @@ Since this script doesn't have external dependencies, you can run it without add
 ## Code Review
 
 Project file: 
-[Project.py](Project.py)
+[a relative link](Project.py)
 
 ### Password
 
