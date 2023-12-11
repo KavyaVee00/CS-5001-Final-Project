@@ -40,6 +40,15 @@ Go over key aspects of code in this section. Both link to the file, include snip
 
 ### Password
 
+The first function that I've written is the one that checks that the password fits the criteria. The is_password_strong function checks if a password is strong based on certain criteria.It takes two parameters: username and password.
+
+The criteria for a strong password are as follows:
+The password must be between 8 and 16 characters in length.
+It must contain at least one uppercase letter ([A-Z]).
+It must contain at least one lowercase letter ([a-z]).
+It must contain at least one digit (\d).
+It must contain at least one special character ([!@#$%^&*(),.?":{}|<>]).
+The password should not contain the username (case-insensitive).
 
     def is_password_strong(username, password):
     """
@@ -57,6 +66,53 @@ Go over key aspects of code in this section. Both link to the file, include snip
             and username.lower() not in password.lower():
         return True
     return False
+
+Code Explanation:
+
+- if 8 <= len(password) <= 16: Checks if the length of the password is between 8 and 16 characters (inclusive).
+- re.search(r'[A-Z]', password): Checks if there is at least one uppercase letter in the password.
+- re.search(r'[a-z]', password): Checks if there is at least one lowercase letter in the password.
+- re.search(r'\d', password): Checks if there is at least one digit in the password.
+- re.search(r'[!@#$%^&*(),.?":{}|<>]', password): Checks if there is at least one special character in the password.
+- username.lower() not in password.lower(): Checks if the lowercase username is not part of the lowercase password.
+
+### Creating an account 
+
+
+
+    def create_account(username, password):
+    
+    Create a new user account with a strong password.
+    """
+    Parameters:
+    - username (str): The desired username.
+    - password (str): The password for the new account.
+
+    Returns:
+    - None
+    """
+    print("Creating a new account:")
+
+    # Check if the username already exists (after stripping leading/trailing spaces)
+    cleaned_username = username.strip()
+    if cleaned_username in user_accounts:
+        print("Username already exists. Please choose another.")
+        return
+
+    # Check if the password is strong
+    while not is_password_strong(cleaned_username, password):
+        print("Weak password. Make sure it meets the criteria:")
+        print("- 8 to 16 characters")
+        print("- At least one uppercase letter")
+        print("- At least one lowercase letter")
+        print("- At least one digit")
+        print("- At least one special character (!@#$%^&*(),.?\":{}|<>)")
+        print("- Should not contain the username")
+        password = input("Enter a stronger password: ")
+
+    # Store the username and password in the dictionary
+    user_accounts[cleaned_username] = password
+    print("Account created successfully!")
 
 
 ### Major Challenges
