@@ -58,8 +58,9 @@ Since this script doesn't have external dependencies, you can run it without add
 
 
 ## Code Review
-Go over key aspects of code in this section. Both link to the file, include snippets in this report (make sure to use the [coding blocks](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)).  Grading wise, we are looking for that you understand your code and what you did. 
 
+Project file: 
+[Project.py](other_file.md)
 
 ### Password
 
