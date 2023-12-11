@@ -40,6 +40,7 @@ Go over key aspects of code in this section. Both link to the file, include snip
 
 ### Password
 
+
 The first function that I've written is the one that checks that the password fits the criteria. The is_password_strong function checks if a password is strong based on certain criteria.It takes two parameters: username and password.
 
 The criteria for a strong password are as follows:
@@ -77,6 +78,7 @@ Code Explanation:
 - username.lower() not in password.lower(): Checks if the lowercase username is not part of the lowercase password.
 
 ### Creating an account 
+
 
 The create_account function allows a user to create a new account. It prompts the user for a username and password. It checks if the username already exists in the user_accounts dictionary. It ensures that the password is strong by repeatedly prompting the user until a strong password is provided. The account details are then stored in the dictionary.
 
@@ -158,6 +160,7 @@ The login function handles the login process. It checks if the entered username 
 
 ### Resetting Password 
 
+The reset_password function allows a user to reset their password. It checks if the username exists in the user_accounts dictionary. It prompts the user for a new password and ensures that it meets the strength criteria. The password is then updated in the dictionary.
 
     def reset_password(username, new_password):
     """
@@ -193,7 +196,53 @@ The login function handles the login process. It checks if the entered username 
     user_accounts[cleaned_username] = new_password
     print("Password reset successful!")
 
+> Key takeaway
+> When I had originally written the code, I had forgotton to update the password in the dictionary. Every time I tried to log in with the new password, it would say wrong password. I realized my mistake and wrote in the code to update the password. This really affirmed for me the usefulness of dictionaries in code.
 
+
+### Main function 
+
+
+The function contains a ongoing loop which ensures that the program continues to run until the user decides to exit. The function begins by welcoming the user to the Northeastern Align networking app. Within the loop, it repeatedly displays a menu of options, including Login (L), Create a New Account (A), Reset Password (R), and Quit (Q). The user is prompted to input their choice and the function processes this choice to trigger the corresponding functionality.
+
+    def main():
+    """
+    The main function for the Northeastern Align networking app.
+
+    Returns:
+    - None
+    """
+    print("Welcome to the Northeastern Align networking app!")
+
+    while True:
+        print("\nOptions:")
+        print("L - Login")
+        print("A - Create a New account")
+        print("R - Reset password")
+        print("Q - Quit")
+
+        choice = input("Enter your choice: ").upper()
+
+        if choice == 'L':
+            username = input("Enter your username: ")
+            password = input("Enter your password: ")
+            login(username, password)
+        elif choice == 'A':
+            username = input("Enter your username: ")
+            password = input("Enter your password: ")
+            create_account(username, password)
+        elif choice == 'R':
+            username = input("Enter your username: ")
+            new_password = input("Enter your new password: ")
+            reset_password(username, new_password)
+        elif choice == 'Q':
+            print("Exiting the Northeastern Align networking app. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+        if __name__ == "__main__":
+            main()
 
 ### Major Challenges
 Key aspects could include pieces that your struggled on and/or pieces that you are proud of and want to show off.
