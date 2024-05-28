@@ -1,4 +1,4 @@
-# Final Project Report - Northeastern Align Networking App
+# Final Project Report 
 
 * Student Name: Kavya Veeramony
 * Github Username: KavyaVee00
