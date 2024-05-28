@@ -8,7 +8,7 @@
 
 
 ## Description 
-I've taken on a project to develop a password checker which was insired by the widespread use of passwords in our everyday online activities. 
+I've taken on a project to develop an interface replicating real-world login scenarios which was insired by the widespread use of passwords in our everyday online activities. 
 
 From emails and social media to shopping and gaming, passwords are a crucial aspect of our online experiences. My aim is to understand how we can ensure these passwords are strong and secure. It goes beyond just account logins; it encompasses all our online interactions, be it for work, school, healthcare, and more. This project is my way of delving into what factors contribute to the security of passwords across various aspects of our digital lives. It's an interesting journey to explore how we can make online activities safer through robust password practices. 
 
